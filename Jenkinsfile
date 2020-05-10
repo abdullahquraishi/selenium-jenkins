@@ -9,9 +9,27 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('composer install') {
       steps {
          bat 'composer install'
+      }
+    } 
+
+    stage('npm install') {
+      steps {
+         bat 'npm install'
+      }
+    }
+
+    stage('integration test') {
+      steps {
+         bat 'npm test'
+      }
+    }  
+
+    stage('unit test') {
+      steps {
+         bat 'vendor/bin/phpunit'
       }
     }      
   }
