@@ -9,7 +9,7 @@ require('chromedriver');
     await driver.findElement(By.name("username")).sendKeys("AB");
     await driver.findElement(By.name("password")).sendKeys("ab1234");
     //submit form
-    await driver.findElement(By.name("login_user")).click();
+    await driver.findElement(By.name("login_userrrr")).click();
     //await driver.wait(until.titleIs('Home2'));
     
   }
