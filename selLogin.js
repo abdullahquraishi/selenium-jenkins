@@ -10,7 +10,7 @@ require('chromedriver');
     await driver.findElement(By.name("password")).sendKeys("ab123");
     //submit form
     await driver.findElement(By.name("login_user")).click();
-    await driver.wait(until.titleIs('Home'));
+    await driver.wait(until.titleIs('Home2'));
     
   }
   catch(e){
@@ -18,6 +18,6 @@ require('chromedriver');
     
   }
   finally {
-    await driver.quit();
+    //await driver.quit();
   }
 })();
