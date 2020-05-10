@@ -31,6 +31,12 @@ pipeline {
       steps {
          bat 'vendor/bin/phpunit'
       }
+    } 
+
+    stage('system test') {
+      steps {
+         bat 'node selLogin'
+      }
     }      
   }
 }
