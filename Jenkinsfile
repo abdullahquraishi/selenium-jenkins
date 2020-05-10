@@ -11,7 +11,7 @@ pipeline {
 
     stage('Test') {
       steps {
-         sh 'composer install'
+         bat 'composer install'
       }
     }      
   }
