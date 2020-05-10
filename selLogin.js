@@ -18,6 +18,6 @@ require('chromedriver');
     
   }
   finally {
-    //await driver.quit();
+    await driver.quit();
   }
 })();
