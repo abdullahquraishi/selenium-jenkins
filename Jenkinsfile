@@ -21,17 +21,19 @@ pipeline {
       }
     }
 
+    stage('unit test') {
+      steps {
+         bat 'vendor/bin/phpunit'
+      }
+    } 
+    
     stage('integration test') {
       steps {
          bat 'npm test'
       }
     }  
 
-    stage('unit test') {
-      steps {
-         bat 'vendor/bin/phpunit'
-      }
-    } 
+
 
     stage('system test') {
       steps {
